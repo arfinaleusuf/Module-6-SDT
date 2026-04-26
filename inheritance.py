@@ -18,12 +18,15 @@ class Leptop:
     def coding(self):
         return f'learning python and practicing'
     
-class Phone:
-    def __init__(self, dual_sim):
- 
+class Phone(Gadget):
+    def __init__(self, dual_sim, brand, color,price, origin):
         self.dual_sim = dual_sim
+        super().__init__(brand, price,color, origin)
+
     def phone_call(self, number, text):
         return f'Sending SMS to: {number} with {text}'
+    def __repr__(self) -> str:
+        return f'Phone: {self.brand} {self.price} {self.dual_sim}'
 
 class Camera:
     def __init__(self,pixel):
@@ -32,3 +35,8 @@ class Camera:
         pass
     
 
+#  inheritance
+my_phone = Phone(True,'iphone','silver',120000, 'china')
+# my_phone.phone_call()
+print(my_phone.brand)
+print(my_phone)
