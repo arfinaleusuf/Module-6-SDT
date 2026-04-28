@@ -5,6 +5,8 @@ class Animal(ABC):
     @abstractmethod  #enforce all derived class to have a eat mathord
     def eat(self):
         print(' I name food')
+
+    @abstractmethod 
     def move(self):
         pass
 
@@ -15,6 +17,8 @@ class Monkey(Animal):
         super().__init__()
     def eat(self):
         print('Hey na nana')
+    def move(self):
+        pass
 
 
 layka = Monkey('lucky')
